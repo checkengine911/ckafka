@@ -1,0 +1,34 @@
+{
+  "env": "local",
+  "app_config": {
+    "http_server": {
+      "port": 8081,
+      "read_timeout_second": 5
+    },
+    "graceful_shutdown_timeout_second": 10
+  },
+  "logger": {
+    "level": "info"
+  },
+  "kafka": {
+    "brokers": "localhost:9093",
+    "login": "",
+    "password": "",
+    "timeout": 0,
+    "TLSCert": "",
+    "consumer_group_id": "consumer_group",
+    "consumer": {
+      "maxBytes": 0,
+      "minBytes": 0,
+      "instances": "groupID:test_group_id,topic:test-topic,count:1",
+      "readBatchSize": 0,
+      "flushInterval": 0,
+      "flushMaxRetries": 0,
+      "fetchMaxRetries": 0,
+      "commitMaxRetries": 0,
+      "handler": {
+        "handlerTopicMap": "test-topic-handler:test-topic"
+      }
+    }
+  }
+}
